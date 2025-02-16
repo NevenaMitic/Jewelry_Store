@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jewelry Store
 
-## Getting Started
+An online jewelry shopping platform with a sleek and modern user interface. Customers can browse collections, add products to their wishlist or cart, and securely complete purchases via Stripe. The platform utilizes MongoDB for data storage, Clerk for authentication, and Cloudinary for high-quality image management.
 
-First, run the development server:
+## Features
+- Browse and explore jewelry collections
+- Add products to wishlist or cart
+- Secure checkout using Stripe
+- Authentication powered by Clerk
+- High-quality image storage via Cloudinary
+- Optimized for performance and responsiveness
+
+## Tech Stack
+- **Frontend:** Next.js, React, TypeScript
+- **Backend:** MongoDB, Mongoose
+- **Authentication:** Clerk
+- **Payments:** Stripe
+- **State Management:** Zustand
+- **UI & Styling:** Tailwind CSS, Lucide Icons, React Icons
+- **Image Handling:** Cloudinary
+
+## Installation
+To set up the project locally, follow these steps:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone the repository
+git clone https://github.com/yourusername/jewelry-store.git
+
+# Navigate to the project folder
+cd jewelry-store
+
+# Install dependencies
+yarn install  # or npm install
+
+# Run the development server
+yarn dev  # or npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3001) with your browser to see the result.
+The app will be available at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
+- `dev` - Starts the development server
+- `build` - Builds the application for production
+- `start` - Runs the built application
+- `lint` - Runs the linter
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Dependencies
+```json
+{
+  "@clerk/nextjs": "^5.2.8",
+  "@stripe/stripe-js": "^4.1.0",
+  "lucide-react": "^0.417.0",
+  "mongoose": "^8.5.1",
+  "next": "14.2.5",
+  "react": "^18",
+  "react-dom": "^18",
+  "react-hot-toast": "^2.4.1",
+  "react-icons": "^5.2.1",
+  "react-scroll": "^1.9.0",
+  "stripe": "^16.5.0",
+  "tailwind-scrollbar-hide": "^1.1.7",
+  "zustand": "^4.5.4"
+}
+```
 
-## Learn More
+## Development Dependencies
+```json
+{
+  "@types/node": "^20",
+  "@types/prop-types": "^15.7.12",
+  "@types/react": "^18",
+  "@types/react-dom": "^18",
+  "@types/react-scroll": "^1.8.10",
+  "postcss": "^8",
+  "tailwindcss": "^3.4.1",
+  "typescript": "^5"
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Compiler Options
+This project follows TypeScript best practices with the following compiler options:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```json
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+```
